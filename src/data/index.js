@@ -24,19 +24,19 @@ export const footerData = {
   socialMediaLinks: [
     {
       label: "/YESHTERY",
-      logo: "/images/facebook.png",
+      logo: "./images/facebook.png",
     },
     {
       label: "/YESHTERY",
-      logo: "/images/linkedIn.png",
+      logo: "./images/linkedIn.png",
     },
     {
       label: "/YESHTERY",
-      logo: "/images/instagram.png",
+      logo: "./images/instagram.png",
     },
     {
       label: "/YESHTERY",
-      logo: "/images/twitter.png",
+      logo: "./images/twitter.png",
     },
   ],
 };
