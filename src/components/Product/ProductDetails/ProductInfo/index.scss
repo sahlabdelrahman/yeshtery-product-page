@@ -1,0 +1,208 @@
+@use "../../../../scss/variables" as *;
+.productInfo {
+  header {
+    margin-bottom: $space-4;
+    .brandLogo {
+      width: 60px;
+      height: auto;
+      object-fit: contain;
+      display: inline-block;
+      margin-bottom: $space-3;
+    }
+    .productName {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--secondary-color);
+      margin-bottom: $space-2;
+    }
+
+    .productCategory {
+      font-size: 16px;
+      font-weight: 500;
+      color: #a7a9ac;
+      margin-bottom: $space-4;
+    }
+
+    .productRating {
+      margin-bottom: $space-4;
+      > ul {
+        display: flex;
+        align-items: center;
+
+        > li {
+          font-size: 17px;
+          font-weight: 600;
+          margin: 0 $space-2;
+          color: var(--secondary-color);
+          ul {
+            display: flex;
+
+            li {
+              svg {
+                color: #ffb900;
+              }
+            }
+          }
+          &:first-of-type {
+            margin: 0;
+          }
+          &:last-of-type {
+            font-size: 15px;
+            color: #575756;
+          }
+        }
+      }
+    }
+    .productPrices {
+      ul {
+        display: flex;
+        align-items: center;
+        li {
+          margin: 0 $space-2;
+          &:first-of-type {
+            margin: 0;
+            font-size: 30px;
+            color: var(--third-color);
+          }
+          &:nth-of-type(2) {
+            font-size: 16px;
+            color: #a7a9ac;
+            text-decoration: line-through;
+            text-decoration-thickness: 1px;
+          }
+          &:nth-of-type(3) {
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 14px;
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    h5 {
+      font-size: 18px;
+      color: var(--secondary-color);
+      margin-bottom: $space-2;
+    }
+    .productSizes {
+      border-top: 0.5px solid #d9d9d9;
+      border-bottom: 0.5px solid #d9d9d9;
+      padding: $space-4 0;
+      ul {
+        display: flex;
+        align-items: center;
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border: 0.5px solid #d9d9d9;
+          font-size: 10px;
+          margin-right: $space-3;
+          color: var(--third-color);
+          &:nth-of-type(3) {
+            background-color: #ececec;
+            color: var(--secondary-color);
+          }
+        }
+      }
+    }
+    .productColors {
+      border-bottom: 0.5px solid #d9d9d9;
+      padding: $space-4 0;
+      ul {
+        display: flex;
+        align-items: center;
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          border: 0.5px solid #d9d9d9;
+          margin-right: $space-3;
+          background-color: #ececec;
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: $space-4 0;
+
+    h5 {
+      font-size: 18px;
+      color: var(--secondary-color);
+      margin-bottom: $space-2;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 50%;
+      padding: $space-1;
+      background-color: #f5f5f5;
+      margin-bottom: $space-2;
+      border: 0.5px solid #d9d9d9;
+      border-radius: 24px;
+      margin-bottom: $space-6;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        button {
+          width: 100%;
+          height: 100%;
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+        }
+      }
+      p {
+        font-size: 16px;
+        color: var(--third-color);
+      }
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: $space-6;
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $space-4 0;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-radius: 27px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:first-of-type {
+          background-color: var(--third-color);
+          color: var(--light-color);
+        }
+        &:last-of-type {
+          background-color: var(--primary-color);
+          color: var(--dark-color);
+        }
+      }
+    }
+  }
+}

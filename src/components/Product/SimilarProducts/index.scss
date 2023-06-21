@@ -1,0 +1,182 @@
+@use "../../../scss/variables" as *;
+
+.similarProducts {
+  margin-top: $space-12;
+  header {
+    margin-bottom: $space-3;
+    h4 {
+      font-size: 28px;
+      color: var(--third-color);
+      margin-bottom: $space-3;
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: 300;
+      color: #575756;
+    }
+  }
+
+  .notFoundSimilarProducts {
+    text-align: center;
+    color: #575756;
+    font-size: 20px;
+    font-weight: 700;
+    margin: $space-2 0;
+  }
+
+  main {
+    .products {
+      display: flex;
+      overflow-x: scroll;
+      padding: $space-6 0;
+    }
+    .similarProduct {
+      width: 25%;
+      flex: 0 0 25%;
+      padding: $space-2;
+      margin-right: $space-3;
+      background: var(--light-color) fff;
+      border: 0.7551665306091309px solid #ececec;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px #00000026;
+
+      header {
+        border-radius: 5px;
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+
+      footer {
+        .productName {
+          font-size: 14px;
+          color: var(--secondary-color);
+          margin-bottom: $space-4;
+          display: -webkit-box;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+        .productPrices {
+          margin-bottom: $space-3;
+          ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .price {
+              p {
+                font-size: 20px;
+                color: var(--third-color);
+                margin-bottom: $space-2;
+              }
+              ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                li {
+                  margin-right: $space-2;
+                  &:first-of-type {
+                    font-size: 14px;
+                    color: #a7a9ac;
+                    text-decoration: line-through;
+                    text-decoration-thickness: 1px;
+                  }
+                  &:last-of-type {
+                    margin-right: 0;
+                    padding: 5px;
+                    border-radius: 3px;
+                    font-size: 10px;
+                    background-color: var(--primary-color);
+                    color: var(--dark-color) 000;
+                  }
+                }
+              }
+            }
+
+            .brandLogo {
+              width: 50px;
+              height: auto;
+              object-fit: contain;
+              display: inline-block;
+            }
+          }
+        }
+
+        .productRating {
+          margin-bottom: $space-3;
+          > ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            > li {
+              font-size: 14px;
+              font-weight: 600;
+              color: var(--secondary-color);
+              margin-left: $space-1;
+              ul {
+                display: flex;
+
+                li {
+                  svg {
+                    font-size: 20px;
+                    color: #ffb900;
+                  }
+                }
+              }
+              &:first-of-type {
+                margin: 0;
+              }
+            }
+          }
+        }
+
+        .productLocation {
+          margin-bottom: $space-1;
+          ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            li {
+              display: flex;
+              align-items: center;
+              font-size: 10px;
+              color: var(--secondary-color);
+              font-weight: 700;
+
+              span {
+                margin-left: $space-1;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media (max-width: #{$desktopBreakPoint - 1} ) {
+    main {
+      .similarProduct {
+        width: 35%;
+        flex: 0 0 35%;
+      }
+    }
+  }
+
+  @media (max-width: #{$tabletBreakPoint - 1} ) {
+    main {
+      .similarProduct {
+        width: 50%;
+        flex: 0 0 50%;
+      }
+    }
+  }
+}

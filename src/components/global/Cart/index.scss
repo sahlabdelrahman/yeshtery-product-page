@@ -1,0 +1,130 @@
+@use "../../../scss/variables" as *;
+
+.cart {
+}
+
+.cartCloseIcon {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: $space-3;
+  margin-top: $space-4;
+  svg {
+    font-size: 28px;
+    cursor: pointer;
+  }
+}
+
+.cartHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: $space-6;
+
+  h5 {
+    font-size: 28px;
+    color: var(--third-color);
+  }
+}
+
+.cartData {
+  h6 {
+    font-size: 18px;
+    color: var(--secondary-color);
+    margin-bottom: $space-6;
+  }
+
+  .cartItem {
+    border: 0.75px solid #ececec;
+    border-radius: 7px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      border-radius: 3px;
+      margin-right: $space-2;
+    }
+    .itemDetails {
+      flex: 1;
+      h6 {
+        font-size: 14px;
+        margin-bottom: $space-2;
+      }
+
+      > p {
+        font-size: 11px;
+        font-weight: 700;
+        margin-bottom: $space-1;
+      }
+
+      .price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p {
+          font-size: 20px;
+          color: var(--third-color);
+        }
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: $space-1 $space-4;
+          background-color: var(--primary-color);
+          color: var(--secondary-color);
+          border: none;
+          border-radius: 12px;
+          font-size: 10px;
+          font-weight: 500;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.cartFooter {
+  .total {
+    font-size: 22px;
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    margin: $space-6 0;
+    font-weight: 700;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $space-6;
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: $space-3 0;
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      border-radius: 24px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+
+      &:first-of-type {
+        background-color: var(--primary-color);
+        color: var(--dark-color);
+      }
+      &:last-of-type {
+        background-color: var(--third-color);
+        color: var(--light-color);
+      }
+    }
+  }
+}
+.emptyCart {
+  text-align: center;
+  font-weight: 700;
+}
